@@ -81,7 +81,6 @@ const Menu = () => {
 
   const handleAddToCart = (item) => {
     setCart([...cart, item]);
-
     toast.success(`${item.name} adicionado ao carrinho!`, {
       position: "bottom-left",
       autoClose: 3000,
@@ -91,6 +90,8 @@ const Menu = () => {
       draggable: true,
       progress: undefined,
     });
+
+    setSelectedItem(null);
   };
 
   const handleRemoveItem = (index) => {
@@ -117,6 +118,7 @@ const Menu = () => {
           cartItems={cart}
           onRemoveItem={handleRemoveItem}
           onClose={handleCloseCartModal}
+          onClearCart={() => setCart([])}
         />
       )}
 

@@ -1,6 +1,8 @@
+import { AiOutlineClose } from "react-icons/ai";
+
 const ItemDetailModal = ({ item, onClose, onAddToCart }) => {
   const handleAddToCart = () => {
-    onAddToCart({ name: item.name, price: item.price, image: item.image }); // Chama a função que adiciona o item ao carrinho
+    onAddToCart({ name: item.name, price: item.price, image: item.image });
   };
 
   return (
@@ -10,7 +12,7 @@ const ItemDetailModal = ({ item, onClose, onAddToCart }) => {
           onClick={onClose}
           className="absolute top-2 right-2 text-gray-600 hover:text-gray-800 text-2xl"
         >
-          X
+          <AiOutlineClose />
         </button>
         <h2 className="text-2xl font-bold mb-4">{item.name}</h2>
         <img

@@ -1,4 +1,9 @@
-const CartModal = ({ cartItems, onRemoveItem, onClose }) => {
+import { AiOutlineClose } from "react-icons/ai";
+import { RiDeleteBin6Line } from "react-icons/ri";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const CartModal = ({ cartItems, onRemoveItem, onClose, onClearCart }) => {
   const groupedItems = cartItems.reduce((acc, item) => {
     const existingItem = acc.find((i) => i.name === item.name);
     if (existingItem) {
@@ -14,6 +19,15 @@ const CartModal = ({ cartItems, onRemoveItem, onClose }) => {
     0
   );
 
+  const handleFinalizePurchase = () => {
+    toast.success("Compra finalizada com sucesso!");
+
+    setTimeout(() => {
+      onClearCart();
+      onClose();
+    }, 2000);
+  };
+
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-white p-6 rounded-lg shadow-lg w-96 relative">
@@ -21,7 +35,7 @@ const CartModal = ({ cartItems, onRemoveItem, onClose }) => {
           onClick={onClose}
           className="absolute top-2 right-2 text-gray-600 hover:text-gray-800 text-2xl"
         >
-          X
+          <AiOutlineClose />
         </button>
 
         <h2 className="text-2xl font-bold mb-4">Carrinho de Compras</h2>
@@ -51,7 +65,7 @@ const CartModal = ({ cartItems, onRemoveItem, onClose }) => {
                     className="bg-red-500 text-white px-3 py-1 rounded-full hover:bg-red-600 transition duration-300"
                     onClick={() => onRemoveItem(index)}
                   >
-                    Remover
+                    <RiDeleteBin6Line />
                   </button>
                 </li>
               ))}
@@ -63,7 +77,7 @@ const CartModal = ({ cartItems, onRemoveItem, onClose }) => {
             <div className="mt-4">
               <button
                 className="w-full bg-blue-500 px-5 py-2 text-white rounded-full hover:bg-blue-600 transition duration-300"
-                onClick={onClose}
+                onClick={handleFinalizePurchase}
               >
                 Finalizar Compra
               </button>

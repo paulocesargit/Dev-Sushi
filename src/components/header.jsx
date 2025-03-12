@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import logo from "../assets/Logo.webp";
 import bgImage from "../assets/banner.webp";
 
@@ -13,12 +14,14 @@ const Header = () => {
           alt="Logo do Dev Sushi"
           className="w-32 h-32 rounded-full shadow-xl transform transition duration-500 hover:scale-110"
         />
-        <div className="bg-green-500 px-8 py-3 rounded-full mt-5 shadow-lg transition transform duration-500 hover:scale-105">
+        <NavLink
+          to="/menu"
+          className="bg-green-500 px-8 py-3 rounded-full mt-5 shadow-lg transition transform duration-500 hover:scale-105"
+        >
           <span className="text-white font-semibold">
-            {" "}
-            Seg á Sex - 18:00 às 22:00
+            Seg à Sex - 18:00 às 22:00
           </span>
-        </div>
+        </NavLink>
       </div>
     </header>
   );
