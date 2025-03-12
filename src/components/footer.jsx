@@ -50,10 +50,11 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="text-center text-gray-500 mt-6 text-sm pl-17">
+      <div className="text-center text-gray-500 mt-5 text-sm pl-17">
         &copy; {new Date().getFullYear()} DevSushi. Todos os direitos
         reservados.
       </div>
+
       <CreditsModal />
     </footer>
   );
