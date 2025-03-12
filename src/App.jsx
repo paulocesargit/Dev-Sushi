@@ -10,3 +10,8 @@ function App() {
 }
 
 export default App;
+
+/*
+ * © 2025 Dev-Sushi Todos os direitos reservados.
+ * Criado por paulocesargit
+ */

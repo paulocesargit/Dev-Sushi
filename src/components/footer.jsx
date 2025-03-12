@@ -1,6 +1,7 @@
 import logo from "../assets/Sushifooter.png";
 import { NavLink } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import CreditsModal from "./creditmodal";
 
 const Footer = () => {
   return (
@@ -53,6 +54,7 @@ const Footer = () => {
         &copy; {new Date().getFullYear()} DevSushi. Todos os direitos
         reservados.
       </div>
+      <CreditsModal />
     </footer>
   );
 };

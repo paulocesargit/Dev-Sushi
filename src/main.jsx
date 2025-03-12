@@ -7,3 +7,8 @@ createRoot(document.getElementById("root")).render(
     <App />
   </StrictMode>
 );
+
+/*
+ * © 2025 Dev-Sushi. Todos os direitos reservados.
+ * Criado por paulocesargit
+ */
