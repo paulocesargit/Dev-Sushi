@@ -1,3 +1,5 @@
+import { FaPlus } from "react-icons/fa";
+
 const MenuItem = ({
   name,
   description,
@@ -16,19 +18,19 @@ const MenuItem = ({
         alt={name}
         className="w-28 h-28 rounded-md hover:-rotate-3 hover:scale-110 duration-300"
       />
-      <div>
+      <div className="flex-1">
         <p className="font-bold text-lg">{name}</p>
         <p className="text-sm">{description}</p>
-        <div className="flex items-center gap-2 justify-between mt-3">
+        <div className="flex items-center mt-3">
           <p className="font-bold text-xl">R$ {price}</p>
           <button
-            className="bg-green-500 px-5 py-2 text-white rounded-full hover:bg-green-600 transition duration-300"
+            className="bg-black p-3 text-white rounded-full hover:bg-gray-500 transition duration-300 ml-auto"
             onClick={(e) => {
               e.stopPropagation();
               onAddToCart({ name, price, image });
             }}
           >
-            <i className="fas fa-cart-plus text-lg"></i> Adicionar
+            <FaPlus className="text-lg" />
           </button>
         </div>
       </div>

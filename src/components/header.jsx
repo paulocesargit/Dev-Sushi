@@ -13,10 +13,6 @@ const Header = () => {
           alt="Logo do Dev Sushi"
           className="w-32 h-32 rounded-full shadow-xl transform transition duration-500 hover:scale-110"
         />
-        <h1 className="text-5xl mt-4 mb-2 font-extrabold text-white tracking-wide"></h1>
-        <span className="text-white text-xl font-semibold">
-          Rua Dev - 10, Recife - PE
-        </span>
         <div className="bg-green-500 px-8 py-3 rounded-full mt-5 shadow-lg transition transform duration-500 hover:scale-105">
           <span className="text-white font-semibold">
             {" "}

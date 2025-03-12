@@ -20,9 +20,9 @@ const ItemDetailModal = ({ item, onClose, onAddToCart }) => {
         />
         <p className="text-sm mb-4">{item.description}</p>
         <p className="text-lg font-bold">Preço: R$ {item.price}</p>
-        <div className="mt-4 flex justify-end">
+        <div className="mt-4 flex justify-center">
           <button
-            className="bg-green-500 px-5 py-2 text-white rounded-full hover:bg-green-600 transition duration-300"
+            className="bg-green-500 px-5 py-2 text-white rounded-full hover:bg-green-600 transition duration-300  "
             onClick={handleAddToCart}
           >
             Adicionar ao Carrinho

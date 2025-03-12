@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import MenuItem from "../components/MenuItem";
+import MenuItem from "../components/menuItem";
 import { FaShoppingCart } from "react-icons/fa";
 import sushi1 from "../assets/sushi1.jpg";
 import sushi2 from "../assets/sushi2.jpg";
@@ -18,50 +18,58 @@ import "react-toastify/dist/ReactToastify.css";
 const menuItems = [
   {
     name: "Sushi JavaScript",
-    description: "8 peças de sushi...",
-    price: "18.90",
+    description:
+      "12 peças: 4 Sashimis de salmão, 4 Niguiris de atum, 4 Hossomakis de pepino.",
+    price: "49.90",
     image: sushi1,
   },
   {
     name: "Sushi TypeScript",
-    description: "10 peças de sushi...",
-    price: "21.90",
+    description:
+      "14 peças: 6 Sashimis de atum, 4 Niguiris de salmão, 4 Hossomakis de cream cheese.",
+    price: "58.90",
     image: sushi2,
   },
   {
     name: "Sushi Node.js",
-    description: "8 peças de sushi...",
-    price: "16.90",
+    description:
+      "12 peças: 4 Sashimis de peixe branco, 4 Niguiris de polvo, 4 Uramakis de salmão com gergelim.",
+    price: "47.90",
     image: sushi3,
   },
   {
     name: "Sushi Angular",
-    description: "12 peças de sushi...",
-    price: "25.90",
+    description:
+      "16 peças: 6 Sashimis de salmão, 4 Niguiris de camarão, 6 Hossomakis de kani.",
+    price: "65.90",
     image: sushi4,
   },
   {
     name: "Sushi Java",
-    description: "10 peças de sushi...",
-    price: "32.90",
+    description:
+      "14 peças: 6 Sashimis de polvo, 4 Niguiris de atum, 4 Uramakis de salmão com abacate.",
+    price: "72.90",
     image: sushi5,
   },
   {
     name: "Sushi React",
-    description: "8 peças de sushi...",
-    price: "18.90",
+    description:
+      "12 peças: 4 Sashimis de atum, 4 Niguiris de salmão, 4 Hossomakis de pepino com cream cheese.",
+    price: "52.90",
     image: sushi6,
   },
   {
     name: "Sushi Python",
-    description: "10 peças de sushi...",
-    price: "22.90",
+    description:
+      "14 peças: 6 Sashimis de peixe branco, 4 Niguiris de camarão, 4 Uramakis de kani crocante.",
+    price: "59.90",
     image: sushi7,
   },
   {
-    name: "Sushi .Net Vegan",
-    description: "8 peças de sushi...",
-    price: "16.90",
+    name: "Sushi .Net",
+    description:
+      "12 peças: 4 Sashimis de salmão, 4 Niguiris de polvo, 4 Hossomakis de manga com gergelim.",
+    price: "48.90",
     image: sushi8,
   },
 ];
@@ -75,7 +83,7 @@ const Menu = () => {
     setCart([...cart, item]);
 
     toast.success(`${item.name} adicionado ao carrinho!`, {
-      position: "bottom-right",
+      position: "bottom-left",
       autoClose: 3000,
       hideProgressBar: true,
       closeOnClick: true,
@@ -138,7 +146,7 @@ const Menu = () => {
 
       <button
         onClick={handleCartClick}
-        className="fixed bottom-10 right-10 bg-green-500 p-4 rounded-full text-white shadow-lg hover:bg-green-600 transition duration-300"
+        className="fixed bottom-5 right-10 bg-orange-500  p-4 rounded-full text-white shadow-lg hover:bg-orange-600 transition duration-300"
       >
         <FaShoppingCart size={24} />
         {cart.length > 0 && (

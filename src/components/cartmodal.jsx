@@ -1,6 +1,16 @@
 const CartModal = ({ cartItems, onRemoveItem, onClose }) => {
-  const total = cartItems.reduce(
-    (acc, item) => acc + parseFloat(item.price),
+  const groupedItems = cartItems.reduce((acc, item) => {
+    const existingItem = acc.find((i) => i.name === item.name);
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      acc.push({ ...item, quantity: 1 });
+    }
+    return acc;
+  }, []);
+
+  const total = groupedItems.reduce(
+    (acc, item) => acc + parseFloat(item.price) * item.quantity,
     0
   );
 
@@ -15,15 +25,28 @@ const CartModal = ({ cartItems, onRemoveItem, onClose }) => {
         </button>
 
         <h2 className="text-2xl font-bold mb-4">Carrinho de Compras</h2>
-        {cartItems.length === 0 ? (
+        {groupedItems.length === 0 ? (
           <p className="text-lg">Seu carrinho está vazio.</p>
         ) : (
           <div>
             <ul className="space-y-3">
-              {cartItems.map((item, index) => (
-                <li key={index} className="flex justify-between items-center">
-                  <span>{item.name}</span>
-                  <span>R$ {item.price}</span>
+              {groupedItems.map((item, index) => (
+                <li
+                  key={index}
+                  className="flex items-center justify-between bg-gray-100 p-2 rounded-lg"
+                >
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="w-12 h-12 rounded-md"
+                  />
+                  <div className="flex-1 ml-3">
+                    <p className="font-bold">{item.name}</p>
+                    <p className="text-gray-600">Qtd: {item.quantity}</p>
+                  </div>
+                  <span className="font-bold">
+                    R$ {(item.price * item.quantity).toFixed(2)}
+                  </span>
                   <button
                     className="bg-red-500 text-white px-3 py-1 rounded-full hover:bg-red-600 transition duration-300"
                     onClick={() => onRemoveItem(index)}
@@ -37,9 +60,9 @@ const CartModal = ({ cartItems, onRemoveItem, onClose }) => {
               <span className="font-bold text-xl">Total:</span>
               <span className="text-xl">R$ {total.toFixed(2)}</span>
             </div>
-            <div className="mt-4 flex justify-between">
+            <div className="mt-4">
               <button
-                className="bg-blue-500 px-5 py-2 text-white rounded-full hover:bg-blue-600 transition duration-300"
+                className="w-full bg-blue-500 px-5 py-2 text-white rounded-full hover:bg-blue-600 transition duration-300"
                 onClick={onClose}
               >
                 Finalizar Compra

@@ -1,3 +1,10 @@
+import {
+  FaShieldAlt,
+  FaRegFileAlt,
+  FaCookie,
+  FaRegEnvelope,
+} from "react-icons/fa";
+
 const PrivacyPolicy = () => {
   return (
     <div className="max-w-4xl mx-auto p-6">
@@ -7,7 +14,10 @@ const PrivacyPolicy = () => {
 
       <div className="space-y-6">
         <section>
-          <h2 className="text-2xl font-semibold">Introdução</h2>
+          <h2 className="text-2xl font-semibold flex items-center">
+            <FaRegFileAlt className="mr-2" />
+            Introdução
+          </h2>
           <p className="mt-2 text-lg">
             A sua privacidade é importante para nós. Esta Política de
             Privacidade descreve como coletamos, usamos, protegemos e
@@ -17,7 +27,10 @@ const PrivacyPolicy = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold">Informações Coletadas</h2>
+          <h2 className="text-2xl font-semibold flex items-center">
+            <FaRegFileAlt className="mr-2" />
+            Informações Coletadas
+          </h2>
           <p className="mt-2 text-lg">Coletamos as seguintes informações:</p>
           <ul className="list-disc pl-6 mt-2 text-lg">
             <li>
@@ -37,7 +50,10 @@ const PrivacyPolicy = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold">Uso das Informações</h2>
+          <h2 className="text-2xl font-semibold flex items-center">
+            <FaShieldAlt className="mr-2" />
+            Uso das Informações
+          </h2>
           <p className="mt-2 text-lg">
             As informações coletadas são utilizadas para:
           </p>
@@ -58,7 +74,10 @@ const PrivacyPolicy = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold">Proteção das Informações</h2>
+          <h2 className="text-2xl font-semibold flex items-center">
+            <FaShieldAlt className="mr-2" />
+            Proteção das Informações
+          </h2>
           <p className="mt-2 text-lg">
             Adotamos medidas de segurança adequadas para proteger suas
             informações pessoais contra acessos não autorizados, uso ou
@@ -69,7 +88,8 @@ const PrivacyPolicy = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold">
+          <h2 className="text-2xl font-semibold flex items-center">
+            <FaShieldAlt className="mr-2" />
             Compartilhamento de Informações
           </h2>
           <p className="mt-2 text-lg">
@@ -89,7 +109,10 @@ const PrivacyPolicy = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold">Cookies</h2>
+          <h2 className="text-2xl font-semibold flex items-center">
+            <FaCookie className="mr-2" />
+            Cookies
+          </h2>
           <p className="mt-2 text-lg">
             Utilizamos cookies para melhorar a sua experiência no nosso site.
             Cookies são pequenos arquivos armazenados no seu dispositivo que
@@ -100,7 +123,10 @@ const PrivacyPolicy = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold">Seus Direitos</h2>
+          <h2 className="text-2xl font-semibold flex items-center">
+            <FaShieldAlt className="mr-2" />
+            Seus Direitos
+          </h2>
           <p className="mt-2 text-lg">
             Você tem o direito de acessar, corrigir ou excluir suas informações
             pessoais armazenadas por nós. Se desejar exercer esses direitos,
@@ -110,7 +136,10 @@ const PrivacyPolicy = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold">Alterações nesta Política</h2>
+          <h2 className="text-2xl font-semibold flex items-center">
+            <FaShieldAlt className="mr-2" />
+            Alterações nesta Política
+          </h2>
           <p className="mt-2 text-lg">
             Podemos atualizar esta Política de Privacidade periodicamente para
             refletir alterações em nossas práticas ou por outras razões
@@ -121,7 +150,10 @@ const PrivacyPolicy = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold">Contato</h2>
+          <h2 className="text-2xl font-semibold flex items-center">
+            <FaRegEnvelope className="mr-2" />
+            Contato
+          </h2>
           <p className="mt-2 text-lg">
             Se você tiver alguma dúvida ou preocupação sobre esta Política de
             Privacidade, entre em contato conosco através do e-mail:{" "}

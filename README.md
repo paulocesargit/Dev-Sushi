@@ -2,17 +2,16 @@
 
 # DevSushi
 
-O **DevSushi** é um projeto que eu criei para treinar meus conhecimentos em desenvolvimento. É uma plataforma einterativa.
+DevSushi é um projeto que criei para treinar minhas habilidades em desenvolvimento de forma prática e divertida. A ideia é unir o aprendizado de programação com a paixão pela culinária japonesa que eu tenho, criando uma plataforma interativa que me ajude a crescer enquanto desenvolvo algo bacana.
 
-é um restaurante de sushi, trazendo uma fusão única entre o aprendizado de desenvolvimento e a paixão pela culinária japonesa. O projeto foi feito como uma maneira de aprimorar minhas habilidades técnicas enquanto crio algo prático e envolvente. A interface é responsiva e moderna, proporcionando uma navegação fluída em qualquer dispositivo.
+A interface do DevSushi foi projetada para ser moderna e responsiva, oferecendo uma navegação suave e intuitiva em qualquer dispositivo. Cada detalhe foi pensado para proporcionar uma experiência prática de desenvolvimento, ao mesmo tempo que traz um pouco da cultura gastronômica do Japão.
 
 ---
 
 ## 📌 Recursos
 
-### Páginas Públicas:
+### Páginas:
 
-- Seção de apresentação do projeto e suas funcionalidades.
 - Interface responsiva otimizada para diferentes dispositivos.
 
 ### Notificações:
@@ -106,6 +105,10 @@ http://localhost:3000
 ### 🛠 Código bem estruturado:
 
 - Componentização e reutilização eficiente.
+
+# Autor
+
+Paulo Cesar </br>
 
 ## 📄 Licença
 
