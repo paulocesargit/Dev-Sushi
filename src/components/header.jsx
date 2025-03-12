@@ -16,11 +16,9 @@ const Header = () => {
         />
         <NavLink
           to="/menu"
-          className="bg-green-500 px-8 py-3 rounded-full mt-5 shadow-lg transition transform duration-500 hover:scale-105"
+          className="bg-black px-10 py-3 rounded-full mt-6 shadow-lg transition transform duration-500 hover:scale-105 border border-gray-700 text-white font-semibold text-lg"
         >
-          <span className="text-white font-semibold">
-            Seg à Sex - 18:00 às 22:00
-          </span>
+          Seg à Sex - 18:00 às 22:00
         </NavLink>
       </div>
     </header>

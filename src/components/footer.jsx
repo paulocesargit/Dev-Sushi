@@ -1,4 +1,5 @@
-import logo from "../assets/logo-render.png";
+import logo from "../assets/Sushifooter.png";
+import { NavLink } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
@@ -9,19 +10,32 @@ const Footer = () => {
           <img src={logo} alt="Logo" className="h-12 w-12" />
           <span className="text-xl font-bold">Dev Sushi</span>
         </div>
-
-        <div className="flex space-x-6 mt-4 md:mt-0 ">
-          <a href="/menu" className="hover:text-gray-400">
-            Inicio
-          </a>
-          <a href="/contato" className="hover:text-gray-400">
+        <div className="flex space-x-6 mt-4 md:mt-0">
+          <NavLink
+            to="/menu"
+            className={({ isActive }) =>
+              isActive ? "text-gray-400 font-semibold" : "hover:text-gray-400"
+            }
+          >
+            Início
+          </NavLink>
+          <NavLink
+            to="/contato"
+            className={({ isActive }) =>
+              isActive ? "text-gray-400 font-semibold" : "hover:text-gray-400"
+            }
+          >
             Contato
-          </a>
-          <a href="/politic" className="hover:text-gray-400">
+          </NavLink>
+          <NavLink
+            to="/politic"
+            className={({ isActive }) =>
+              isActive ? "text-gray-400 font-semibold" : "hover:text-gray-400"
+            }
+          >
             Política de Privacidade
-          </a>
+          </NavLink>
         </div>
-
         <div className="flex space-x-4 mt-4 md:mt-0">
           <a href="#" className="hover:text-gray-400">
             <FaFacebook className="text-xl" />
