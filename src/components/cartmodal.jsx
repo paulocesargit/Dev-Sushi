@@ -46,7 +46,7 @@ const CartModal = ({ cartItems, onRemoveItem, onClose, onClearCart }) => {
           </div>
         ) : (
           <div>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <ul className="space-y-4">
               {groupedItems.map((item, index) => (
                 <li
                   key={index}
@@ -55,18 +55,20 @@ const CartModal = ({ cartItems, onRemoveItem, onClose, onClearCart }) => {
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="w-16 h-16 rounded-md"
+                    className="w-16 h-16 rounded-md object-cover"
                   />
-                  <div className="flex-1 ml-3">
-                    <p className="font-bold">{item.name}</p>
-                    <p className="text-gray-600">Qtd: {item.quantity}</p>
+                  <div className="flex-1 ml-4">
+                    <p className="font-bold text-lg">{item.name}</p>
+                    <p className="text-gray-600 text-sm">
+                      Qtd: {item.quantity}
+                    </p>
                   </div>
-                  <div className="flex items-center justify-between w-full">
-                    <span className="font-bold">
+                  <div className="text-right">
+                    <p className="font-bold text-lg">
                       R$ {(item.price * item.quantity).toFixed(2)}
-                    </span>
+                    </p>
                     <button
-                      className="bg-red-500 text-white px-3 py-1 rounded-full hover:bg-red-600 transition duration-300"
+                      className="bg-red-500 text-white px-3 py-1 rounded-full hover:bg-red-600 transition duration-300 mt-1"
                       onClick={() => onRemoveItem(index)}
                     >
                       <RiDeleteBin6Line />
