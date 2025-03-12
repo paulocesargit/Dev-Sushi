@@ -30,7 +30,7 @@ const CartModal = ({ cartItems, onRemoveItem, onClose, onClearCart }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white p-6 rounded-lg shadow-lg w-96 relative">
+      <div className="bg-white p-6 rounded-lg shadow-lg w-full sm:w-[600px] max-h-[80vh] overflow-y-auto relative">
         <button
           onClick={onClose}
           className="absolute top-2 right-2 text-gray-600 hover:text-gray-800 text-2xl"
@@ -38,45 +38,50 @@ const CartModal = ({ cartItems, onRemoveItem, onClose, onClearCart }) => {
           <AiOutlineClose />
         </button>
 
-        <h2 className="text-2xl font-bold mb-4">Carrinho de Compras</h2>
+        <h2 className="text-2xl font-bold text-center mb-4">Seu Carrinho</h2>
+
         {groupedItems.length === 0 ? (
-          <p className="text-lg">Seu carrinho está vazio.</p>
+          <div className="text-center">
+            <p className="text-lg">Seu carrinho está vazio.</p>
+          </div>
         ) : (
           <div>
-            <ul className="space-y-3">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {groupedItems.map((item, index) => (
                 <li
                   key={index}
-                  className="flex items-center justify-between bg-gray-100 p-2 rounded-lg"
+                  className="flex items-center justify-between bg-gray-100 p-4 rounded-lg"
                 >
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="w-12 h-12 rounded-md"
+                    className="w-16 h-16 rounded-md"
                   />
                   <div className="flex-1 ml-3">
                     <p className="font-bold">{item.name}</p>
                     <p className="text-gray-600">Qtd: {item.quantity}</p>
                   </div>
-                  <span className="font-bold">
-                    R$ {(item.price * item.quantity).toFixed(2)}
-                  </span>
-                  <button
-                    className="bg-red-500 text-white px-3 py-1 rounded-full hover:bg-red-600 transition duration-300"
-                    onClick={() => onRemoveItem(index)}
-                  >
-                    <RiDeleteBin6Line />
-                  </button>
+                  <div className="flex items-center justify-between w-full">
+                    <span className="font-bold">
+                      R$ {(item.price * item.quantity).toFixed(2)}
+                    </span>
+                    <button
+                      className="bg-red-500 text-white px-3 py-1 rounded-full hover:bg-red-600 transition duration-300"
+                      onClick={() => onRemoveItem(index)}
+                    >
+                      <RiDeleteBin6Line />
+                    </button>
+                  </div>
                 </li>
               ))}
             </ul>
-            <div className="mt-4 flex justify-between">
+            <div className="mt-4 flex items-center space-x-2">
               <span className="font-bold text-xl">Total:</span>
               <span className="text-xl">R$ {total.toFixed(2)}</span>
             </div>
-            <div className="mt-4">
+            <div className="mt-4 flex justify-center">
               <button
-                className="w-full bg-blue-500 px-5 py-2 text-white rounded-full hover:bg-blue-600 transition duration-300"
+                className="w-full sm:w-auto px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300"
                 onClick={handleFinalizePurchase}
               >
                 Finalizar Compra
