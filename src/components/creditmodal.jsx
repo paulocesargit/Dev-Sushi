@@ -26,8 +26,8 @@ const CreditsModal = () => {
             >
               <FaTimes size={20} />
             </button>
-            <h2 className="text-center text-2xl font-semibold mb-6 text-gray-900">
-              Desenvolvido por:
+            <h2 className="text-center text-2xl font-bold mb-6 text-gray-900">
+              Desenvolvedor:
             </h2>
             <p className="text-center text-xl font-medium text-gray-800 mb-6">
               Paulo Cesar
