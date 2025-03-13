@@ -17,14 +17,16 @@ const ItemDetailModal = ({ item, onClose, onAddToCart }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.2, ease: "easeOut" }}
+        style={{ willChange: "opacity" }}
       >
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.8 }}
-          transition={{ duration: 0.3, ease: "easeInOut" }}
+          exit={{ opacity: 0, scale: 0.9 }}
+          transition={{ duration: 0.2, ease: "easeOut" }}
           className="bg-white p-6 rounded-lg shadow-lg w-96 relative"
+          style={{ willChange: "opacity, transform" }}
         >
           <button
             onClick={onClose}
@@ -37,10 +39,11 @@ const ItemDetailModal = ({ item, onClose, onAddToCart }) => {
             src={item.image}
             alt={item.name}
             className="w-full h-48 object-cover rounded-md mb-4"
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            style={{ willChange: "opacity, transform" }}
           />
           <p className="text-sm mb-4">{item.description}</p>
           <p className="text-lg font-bold">Preço: R$ {item.price}</p>
@@ -48,8 +51,8 @@ const ItemDetailModal = ({ item, onClose, onAddToCart }) => {
             <motion.button
               className="bg-green-500 px-5 py-2 text-white rounded-full hover:bg-green-600 transition duration-300"
               onClick={handleAddToCart}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               Adicionar ao Carrinho
             </motion.button>
