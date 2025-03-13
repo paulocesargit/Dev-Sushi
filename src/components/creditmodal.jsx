@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { FaLinkedin, FaGithub, FaTimes, FaCode } from "react-icons/fa";
+import * as framer from "framer-motion";
+
+const { motion, AnimatePresence } = framer;
 
 const CreditsModal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +12,12 @@ const CreditsModal = () => {
   };
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 50 }}
+      transition={{ duration: 0.3 }}
+    >
       <button
         onClick={toggleModal}
         className="px-4 py-2 pl-7 rounded-full hover:bg-gray-200 flex items-center space-x-2 transition duration-300 ease-in-out transform hover:scale-105"
@@ -59,7 +67,7 @@ const CreditsModal = () => {
           </div>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 
