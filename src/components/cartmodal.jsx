@@ -2,6 +2,9 @@ import { AiOutlineClose } from "react-icons/ai";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import * as framer from "framer-motion";
+
+const { motion, AnimatePresence } = framer;
 
 const CartModal = ({ cartItems, onRemoveItem, onClose, onClearCart }) => {
   const groupedItems = cartItems.reduce((acc, item) => {
@@ -30,7 +33,13 @@ const CartModal = ({ cartItems, onRemoveItem, onClose, onClearCart }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white p-6 rounded-lg shadow-lg w-full sm:w-[600px] max-h-[80vh] overflow-y-auto relative">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 50 }}
+        transition={{ duration: 0.3 }}
+        className="bg-white p-6 rounded-lg shadow-lg w-full sm:w-[600px] max-h-[80vh] overflow-y-auto relative"
+      >
         <button
           onClick={onClose}
           className="absolute top-2 right-2 text-gray-600 hover:text-gray-800 text-2xl"
@@ -91,7 +100,7 @@ const CartModal = ({ cartItems, onRemoveItem, onClose, onClearCart }) => {
             </div>
           </div>
         )}
-      </div>
+      </motion.div>
     </div>
   );
 };

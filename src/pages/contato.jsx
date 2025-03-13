@@ -20,7 +20,7 @@ const ContactPage = () => {
           <p className="mt-2 text-lg font-medium">Endereço:</p>
           <p className="text-lg">Boa viagem, Recife - PE</p>
           <p className="mt-2 text-lg font-medium">Horário de Funcionamento:</p>
-          <p className="text-lg">Segunda a Sexta: 18:00 - 22:00</p>
+          <p className="text-lg">Segunda a Sexta: 15:00 - 22:00</p>
           <p className="text-lg">Sábado e Domingo: 12:00 - 23:00</p>
         </div>
 

@@ -14,6 +14,9 @@ import Itemodal from "../components/itemmodal";
 
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import * as framer from "framer-motion";
+
+const { motion, AnimatePresence } = framer;
 
 const menuItems = [
   {
@@ -146,9 +149,11 @@ const Menu = () => {
         </div>
       </div>
 
-      <button
+      <motion.button
         onClick={handleCartClick}
-        className="fixed bottom-5 right-10 bg-orange-500  p-4 rounded-full text-white shadow-lg hover:bg-orange-600 transition duration-300"
+        className="fixed bottom-5 right-10 bg-orange-500 p-4 rounded-full text-white shadow-lg hover:bg-orange-600 transition duration-300"
+        animate={{ scale: cart.length > 0 ? [1, 1.2, 1] : 1 }}
+        transition={{ duration: 0.3 }}
       >
         <FaShoppingCart size={24} />
         {cart.length > 0 && (
@@ -156,7 +161,7 @@ const Menu = () => {
             {cart.length}
           </span>
         )}
-      </button>
+      </motion.button>
       <ToastContainer />
     </div>
   );
