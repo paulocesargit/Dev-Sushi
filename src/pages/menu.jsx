@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import MenuItem from "../components/menuItem";
 import { FaShoppingCart } from "react-icons/fa";
-import sushi1 from "../assets/sushi1.jpg";
+import sushi1 from "../assets/sushi01.jpg";
 import sushi2 from "../assets/sushi2.jpg";
 import sushi3 from "../assets/sushi3.jpg";
 import sushi4 from "../assets/sushi4.jpg";
@@ -22,7 +22,7 @@ const menuItems = [
   {
     name: "Sushi JavaScript",
     description:
-      "12 peças: 4 Sashimis de salmão, 4 Niguiris de atum, 4 Hossomakis de pepino.",
+      "12 peças: 4 Sashimis de salmão, 4 Niguiris de atum, 4 Hossomakis de salmão.",
     price: "49.90",
     image: sushi1,
   },
