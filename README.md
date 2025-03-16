@@ -1,7 +1,5 @@
 # 🚀 DevSushi
 
-# DevSushi
-
 DevSushi é um projeto que criei para treinar minhas habilidades em desenvolvimento de forma prática e divertida. A ideia é unir o aprendizado de programação com a paixão pela culinária japonesa que eu tenho, criando uma plataforma interativa que me ajude a crescer enquanto desenvolvo algo bacana.
 
 A interface do DevSushi foi projetada para ser moderna e responsiva, oferecendo uma navegação suave e intuitiva em qualquer dispositivo. Cada detalhe foi pensado para proporcionar uma experiência prática de desenvolvimento, ao mesmo tempo que traz um pouco da cultura gastronômica do Japão.
@@ -36,6 +34,7 @@ A interface do DevSushi foi projetada para ser moderna e responsiva, oferecendo 
 - **React Router DOM**: Gerenciamento de rotas para navegação entre as páginas.
 - **React Icons**: Biblioteca para ícones vetoriais.
 - **React Toastify**: Biblioteca para notificações fáceis de integrar e personalizar.
+- **React Framer Motion**: Animações fluidas e interativas.
 
 ---
 
@@ -48,9 +47,9 @@ DevSushi/
 │   ├── assets/             # Recursos estáticos (imagens, fontes, etc.)
 │   ├── components/         # Componentes reutilizáveis
 │   ├── pages/              # Páginas principais
-│   │   ├── Menu.jsx          # Página principal
-│   │   ├── Contato.jsx       # pagina de conatos do restaurante
-│   │   ├── Politic.jsx       # politica de privacidade do site
+│   │   ├── Menu.jsx        # Página principal
+│   │   ├── Contato.jsx     # pagina de conatos do restaurante
+│   │   ├── Politic.jsx     # politica de privacidade do site
 │   ├── routes/             # Configuração de rotas
 │   ├── App.jsx             # Componente principal do aplicativo
 │   ├── main.jsx            # Ponto de entrada do React
