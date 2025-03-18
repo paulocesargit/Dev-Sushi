@@ -65,7 +65,7 @@ DevSushi/
 ### 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/paulocesargit/devsushi.git
+git clone https://github.com/paulocesargit/Dev-Sushi.git
 cd devsushi
 ```
 
